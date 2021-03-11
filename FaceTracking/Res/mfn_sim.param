@@ -1,0 +1,164 @@
+7767517
+162 175
+Input            input                    0 1 input
+Convolution      Conv_0                   1 1 input 334 0=64 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=1728
+BatchNorm        BatchNormalization_1     1 1 334 335 0=64
+PReLU            PRelu_2                  1 1 335 337 0=64
+ConvolutionDepthWise Conv_3                   1 1 337 338 0=64 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=576 7=64
+BatchNorm        BatchNormalization_4     1 1 338 339 0=64
+PReLU            PRelu_5                  1 1 339 341 0=64
+Convolution      Conv_6                   1 1 341 342 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_7     1 1 342 343 0=128
+PReLU            PRelu_8                  1 1 343 345 0=128
+ConvolutionDepthWise Conv_9                   1 1 345 346 0=128 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_10    1 1 346 347 0=128
+PReLU            PRelu_11                 1 1 347 349 0=128
+Convolution      Conv_12                  1 1 349 350 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_13    1 1 350 351 0=64
+Split            splitncnn_0              1 2 351 351_splitncnn_0 351_splitncnn_1
+Convolution      Conv_14                  1 1 351_splitncnn_1 352 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_15    1 1 352 353 0=128
+PReLU            PRelu_16                 1 1 353 355 0=128
+ConvolutionDepthWise Conv_17                  1 1 355 356 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_18    1 1 356 357 0=128
+PReLU            PRelu_19                 1 1 357 359 0=128
+Convolution      Conv_20                  1 1 359 360 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_21    1 1 360 361 0=64
+BinaryOp         Add_22                   2 1 351_splitncnn_0 361 362 0=0
+Split            splitncnn_1              1 2 362 362_splitncnn_0 362_splitncnn_1
+Convolution      Conv_23                  1 1 362_splitncnn_1 363 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_24    1 1 363 364 0=128
+PReLU            PRelu_25                 1 1 364 366 0=128
+ConvolutionDepthWise Conv_26                  1 1 366 367 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_27    1 1 367 368 0=128
+PReLU            PRelu_28                 1 1 368 370 0=128
+Convolution      Conv_29                  1 1 370 371 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_30    1 1 371 372 0=64
+BinaryOp         Add_31                   2 1 362_splitncnn_0 372 373 0=0
+Split            splitncnn_2              1 2 373 373_splitncnn_0 373_splitncnn_1
+Convolution      Conv_32                  1 1 373_splitncnn_1 374 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_33    1 1 374 375 0=128
+PReLU            PRelu_34                 1 1 375 377 0=128
+ConvolutionDepthWise Conv_35                  1 1 377 378 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_36    1 1 378 379 0=128
+PReLU            PRelu_37                 1 1 379 381 0=128
+Convolution      Conv_38                  1 1 381 382 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_39    1 1 382 383 0=64
+BinaryOp         Add_40                   2 1 373_splitncnn_0 383 384 0=0
+Split            splitncnn_3              1 2 384 384_splitncnn_0 384_splitncnn_1
+Convolution      Conv_41                  1 1 384_splitncnn_1 385 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_42    1 1 385 386 0=128
+PReLU            PRelu_43                 1 1 386 388 0=128
+ConvolutionDepthWise Conv_44                  1 1 388 389 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_45    1 1 389 390 0=128
+PReLU            PRelu_46                 1 1 390 392 0=128
+Convolution      Conv_47                  1 1 392 393 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_48    1 1 393 394 0=64
+BinaryOp         Add_49                   2 1 384_splitncnn_0 394 395 0=0
+Convolution      Conv_50                  1 1 395 396 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=16384
+BatchNorm        BatchNormalization_51    1 1 396 397 0=256
+PReLU            PRelu_52                 1 1 397 399 0=256
+ConvolutionDepthWise Conv_53                  1 1 399 400 0=256 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_54    1 1 400 401 0=256
+PReLU            PRelu_55                 1 1 401 403 0=256
+Convolution      Conv_56                  1 1 403 404 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_57    1 1 404 405 0=128
+Split            splitncnn_4              1 2 405 405_splitncnn_0 405_splitncnn_1
+Convolution      Conv_58                  1 1 405_splitncnn_1 406 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_59    1 1 406 407 0=256
+PReLU            PRelu_60                 1 1 407 409 0=256
+ConvolutionDepthWise Conv_61                  1 1 409 410 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_62    1 1 410 411 0=256
+PReLU            PRelu_63                 1 1 411 413 0=256
+Convolution      Conv_64                  1 1 413 414 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_65    1 1 414 415 0=128
+BinaryOp         Add_66                   2 1 405_splitncnn_0 415 416 0=0
+Split            splitncnn_5              1 2 416 416_splitncnn_0 416_splitncnn_1
+Convolution      Conv_67                  1 1 416_splitncnn_1 417 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_68    1 1 417 418 0=256
+PReLU            PRelu_69                 1 1 418 420 0=256
+ConvolutionDepthWise Conv_70                  1 1 420 421 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_71    1 1 421 422 0=256
+PReLU            PRelu_72                 1 1 422 424 0=256
+Convolution      Conv_73                  1 1 424 425 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_74    1 1 425 426 0=128
+BinaryOp         Add_75                   2 1 416_splitncnn_0 426 427 0=0
+Split            splitncnn_6              1 2 427 427_splitncnn_0 427_splitncnn_1
+Convolution      Conv_76                  1 1 427_splitncnn_1 428 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_77    1 1 428 429 0=256
+PReLU            PRelu_78                 1 1 429 431 0=256
+ConvolutionDepthWise Conv_79                  1 1 431 432 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_80    1 1 432 433 0=256
+PReLU            PRelu_81                 1 1 433 435 0=256
+Convolution      Conv_82                  1 1 435 436 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_83    1 1 436 437 0=128
+BinaryOp         Add_84                   2 1 427_splitncnn_0 437 438 0=0
+Split            splitncnn_7              1 2 438 438_splitncnn_0 438_splitncnn_1
+Convolution      Conv_85                  1 1 438_splitncnn_1 439 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_86    1 1 439 440 0=256
+PReLU            PRelu_87                 1 1 440 442 0=256
+ConvolutionDepthWise Conv_88                  1 1 442 443 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_89    1 1 443 444 0=256
+PReLU            PRelu_90                 1 1 444 446 0=256
+Convolution      Conv_91                  1 1 446 447 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_92    1 1 447 448 0=128
+BinaryOp         Add_93                   2 1 438_splitncnn_0 448 449 0=0
+Split            splitncnn_8              1 2 449 449_splitncnn_0 449_splitncnn_1
+Convolution      Conv_94                  1 1 449_splitncnn_1 450 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_95    1 1 450 451 0=256
+PReLU            PRelu_96                 1 1 451 453 0=256
+ConvolutionDepthWise Conv_97                  1 1 453 454 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_98    1 1 454 455 0=256
+PReLU            PRelu_99                 1 1 455 457 0=256
+Convolution      Conv_100                 1 1 457 458 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_101   1 1 458 459 0=128
+BinaryOp         Add_102                  2 1 449_splitncnn_0 459 460 0=0
+Split            splitncnn_9              1 2 460 460_splitncnn_0 460_splitncnn_1
+Convolution      Conv_103                 1 1 460_splitncnn_1 461 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_104   1 1 461 462 0=256
+PReLU            PRelu_105                1 1 462 464 0=256
+ConvolutionDepthWise Conv_106                 1 1 464 465 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_107   1 1 465 466 0=256
+PReLU            PRelu_108                1 1 466 468 0=256
+Convolution      Conv_109                 1 1 468 469 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_110   1 1 469 470 0=128
+BinaryOp         Add_111                  2 1 460_splitncnn_0 470 471 0=0
+Convolution      Conv_112                 1 1 471 472 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=65536
+BatchNorm        BatchNormalization_113   1 1 472 473 0=512
+PReLU            PRelu_114                1 1 473 475 0=512
+ConvolutionDepthWise Conv_115                 1 1 475 476 0=512 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=4608 7=512
+BatchNorm        BatchNormalization_116   1 1 476 477 0=512
+PReLU            PRelu_117                1 1 477 479 0=512
+Convolution      Conv_118                 1 1 479 480 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=65536
+BatchNorm        BatchNormalization_119   1 1 480 481 0=128
+Split            splitncnn_10             1 2 481 481_splitncnn_0 481_splitncnn_1
+Convolution      Conv_120                 1 1 481_splitncnn_1 482 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_121   1 1 482 483 0=256
+PReLU            PRelu_122                1 1 483 485 0=256
+ConvolutionDepthWise Conv_123                 1 1 485 486 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_124   1 1 486 487 0=256
+PReLU            PRelu_125                1 1 487 489 0=256
+Convolution      Conv_126                 1 1 489 490 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_127   1 1 490 491 0=128
+BinaryOp         Add_128                  2 1 481_splitncnn_0 491 492 0=0
+Split            splitncnn_11             1 2 492 492_splitncnn_0 492_splitncnn_1
+Convolution      Conv_129                 1 1 492_splitncnn_1 493 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_130   1 1 493 494 0=256
+PReLU            PRelu_131                1 1 494 496 0=256
+ConvolutionDepthWise Conv_132                 1 1 496 497 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_133   1 1 497 498 0=256
+PReLU            PRelu_134                1 1 498 500 0=256
+Convolution      Conv_135                 1 1 500 501 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_136   1 1 501 502 0=128
+BinaryOp         Add_137                  2 1 492_splitncnn_0 502 503 0=0
+Convolution      Conv_138                 1 1 503 504 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=65536
+BatchNorm        BatchNormalization_139   1 1 504 505 0=512
+PReLU            PRelu_140                1 1 505 507 0=512
+ConvolutionDepthWise Conv_141                 1 1 507 508 0=512 1=7 11=7 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=25088 7=512
+BatchNorm        BatchNormalization_142   1 1 508 509 0=512
+Flatten          Flatten_143              1 1 509 510
+InnerProduct     MatMul_144               1 1 510 512 0=512 1=0 2=262144
+BatchNorm        BatchNormalization_145   1 1 512 513 0=512
+Split            splitncnn_12             1 2 513 513_splitncnn_0 513_splitncnn_1
+Reduction        ReduceL2_146             1 1 513_splitncnn_1 514 0=8 1=0 -23303=1,1 4=1
+BinaryOp         Div_147                  2 1 513_splitncnn_0 514 output 0=3

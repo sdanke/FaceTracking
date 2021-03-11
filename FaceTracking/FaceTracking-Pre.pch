@@ -1,0 +1,91 @@
+
+//
+//  FaceTracking-Pre.pch
+//  FaceTracking
+//
+//  Created by tangkunyin on 16/3/7.
+//  Copyright © 2016年 www.shuoit.net. All rights reserved.
+//
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+//
+#endif
+
+#ifdef __OBJC__
+
+#import <WebKit/WebKit.h>
+
+//Third Libs
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+
+//diy categories
+#import "UIView+FSAutoLayout.h"
+#import "MBProgressHUD+Show.h"
+#import "UIImage+FSUIImage.h"
+#import "UITextField+FSLimitString.h"
+#import "UIViewController+AlertShow.h"
+#import "UIViewController+ToastShow.h"
+#import "UIView+Diemension.h"
+
+//Usefull Tools
+#import "FSBaseModel.h"
+#import "AppMacros.h"
+#import "GloabVariables.h"
+#import "MessageKey.h"
+#import "FSPathTools.h"
+#import "GlobalCache.h"
+#import "FSCacheTools.h"
+#import "FSStringTools.h"
+#import "FSDeviceTools.h"
+#import "SecutiryTools.h"
+#import "FSNetTools.h"
+#import "FSPositionTools.h"
+#import "FSAutolayoutor.h"
+#import "FSUICreator.h"
+
+
+//Macro
+//weak&strong
+#ifndef    weakify
+#if __has_feature(objc_arc)
+
+#define weakify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+@autoreleasepool{} __weak __typeof__(x) __weak_##x##__ = x \
+_Pragma("clang diagnostic pop")
+
+#else
+
+#define weakify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+@autoreleasepool{} __block __typeof__(x) __block_##x##__ = x \
+_Pragma("clang diagnostic pop")
+
+#endif
+#endif
+
+#ifndef    strongify
+#if __has_feature(objc_arc)
+
+#define strongify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+@try{} @finally{} __typeof__(x) x = __weak_##x##__ \
+_Pragma("clang diagnostic pop")
+
+#else
+
+#define strongify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+@try{} @finally{} __typeof__(x) x = __block_##x##__ \
+_Pragma("clang diagnostic pop")
+
+#endif
+#endif
+
+#endif
+

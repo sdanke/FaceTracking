@@ -1,0 +1,187 @@
+7767517
+185 201
+Input            input.1                  0 1 input.1
+Convolution      Conv_0                   1 1 input.1 301 0=8 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=216
+BatchNorm        BatchNormalization_1     1 1 301 302 0=8
+ReLU             Relu_2                   1 1 302 303
+ConvolutionDepthWise Conv_3                   1 1 303 304 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=72 7=8
+BatchNorm        BatchNormalization_4     1 1 304 305 0=8
+ReLU             Relu_5                   1 1 305 306
+Convolution      Conv_6                   1 1 306 307 0=16 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=128
+BatchNorm        BatchNormalization_7     1 1 307 308 0=16
+ReLU             Relu_8                   1 1 308 309
+ConvolutionDepthWise Conv_9                   1 1 309 310 0=16 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=144 7=16
+BatchNorm        BatchNormalization_10    1 1 310 311 0=16
+ReLU             Relu_11                  1 1 311 312
+Convolution      Conv_12                  1 1 312 313 0=32 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=512
+BatchNorm        BatchNormalization_13    1 1 313 314 0=32
+ReLU             Relu_14                  1 1 314 315
+ConvolutionDepthWise Conv_15                  1 1 315 316 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=288 7=32
+BatchNorm        BatchNormalization_16    1 1 316 317 0=32
+ReLU             Relu_17                  1 1 317 318
+Convolution      Conv_18                  1 1 318 319 0=32 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=1024
+BatchNorm        BatchNormalization_19    1 1 319 320 0=32
+ReLU             Relu_20                  1 1 320 321
+ConvolutionDepthWise Conv_21                  1 1 321 322 0=32 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=288 7=32
+BatchNorm        BatchNormalization_22    1 1 322 323 0=32
+ReLU             Relu_23                  1 1 323 324
+Convolution      Conv_24                  1 1 324 325 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=2048
+BatchNorm        BatchNormalization_25    1 1 325 326 0=64
+ReLU             Relu_26                  1 1 326 327
+ConvolutionDepthWise Conv_27                  1 1 327 328 0=64 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=576 7=64
+BatchNorm        BatchNormalization_28    1 1 328 329 0=64
+ReLU             Relu_29                  1 1 329 330
+Convolution      Conv_30                  1 1 330 331 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=4096
+BatchNorm        BatchNormalization_31    1 1 331 332 0=64
+ReLU             Relu_32                  1 1 332 333
+Split            splitncnn_0              1 2 333 333_splitncnn_0 333_splitncnn_1
+ConvolutionDepthWise Conv_33                  1 1 333_splitncnn_1 334 0=64 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=576 7=64
+BatchNorm        BatchNormalization_34    1 1 334 335 0=64
+ReLU             Relu_35                  1 1 335 336
+Convolution      Conv_36                  1 1 336 337 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_37    1 1 337 338 0=128
+ReLU             Relu_38                  1 1 338 339
+ConvolutionDepthWise Conv_39                  1 1 339 340 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_40    1 1 340 341 0=128
+ReLU             Relu_41                  1 1 341 342
+Convolution      Conv_42                  1 1 342 343 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=16384
+BatchNorm        BatchNormalization_43    1 1 343 344 0=128
+ReLU             Relu_44                  1 1 344 345
+ConvolutionDepthWise Conv_45                  1 1 345 346 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_46    1 1 346 347 0=128
+ReLU             Relu_47                  1 1 347 348
+Convolution      Conv_48                  1 1 348 349 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=16384
+BatchNorm        BatchNormalization_49    1 1 349 350 0=128
+ReLU             Relu_50                  1 1 350 351
+ConvolutionDepthWise Conv_51                  1 1 351 352 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_52    1 1 352 353 0=128
+ReLU             Relu_53                  1 1 353 354
+Convolution      Conv_54                  1 1 354 355 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=16384
+BatchNorm        BatchNormalization_55    1 1 355 356 0=128
+ReLU             Relu_56                  1 1 356 357
+ConvolutionDepthWise Conv_57                  1 1 357 358 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_58    1 1 358 359 0=128
+ReLU             Relu_59                  1 1 359 360
+Convolution      Conv_60                  1 1 360 361 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=16384
+BatchNorm        BatchNormalization_61    1 1 361 362 0=128
+ReLU             Relu_62                  1 1 362 363
+ConvolutionDepthWise Conv_63                  1 1 363 364 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_64    1 1 364 365 0=128
+ReLU             Relu_65                  1 1 365 366
+Convolution      Conv_66                  1 1 366 367 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=16384
+BatchNorm        BatchNormalization_67    1 1 367 368 0=128
+ReLU             Relu_68                  1 1 368 369
+Split            splitncnn_1              1 2 369 369_splitncnn_0 369_splitncnn_1
+ConvolutionDepthWise Conv_69                  1 1 369_splitncnn_1 370 0=128 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=0 6=1152 7=128
+BatchNorm        BatchNormalization_70    1 1 370 371 0=128
+ReLU             Relu_71                  1 1 371 372
+Convolution      Conv_72                  1 1 372 373 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=32768
+BatchNorm        BatchNormalization_73    1 1 373 374 0=256
+ReLU             Relu_74                  1 1 374 375
+ConvolutionDepthWise Conv_75                  1 1 375 376 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304 7=256
+BatchNorm        BatchNormalization_76    1 1 376 377 0=256
+ReLU             Relu_77                  1 1 377 378
+Convolution      Conv_78                  1 1 378 379 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=65536
+BatchNorm        BatchNormalization_79    1 1 379 380 0=256
+ReLU             Relu_80                  1 1 380 381
+Convolution      Conv_81                  1 1 333_splitncnn_0 382 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=4096
+BatchNorm        BatchNormalization_82    1 1 382 383 0=64
+ReLU             Relu_83                  1 1 383 384
+Convolution      Conv_84                  1 1 369_splitncnn_0 385 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=8192
+BatchNorm        BatchNormalization_85    1 1 385 386 0=64
+ReLU             Relu_86                  1 1 386 387
+Convolution      Conv_87                  1 1 381 388 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=16384
+BatchNorm        BatchNormalization_88    1 1 388 389 0=64
+ReLU             Relu_89                  1 1 389 390
+Split            splitncnn_2              1 3 390 390_splitncnn_0 390_splitncnn_1 390_splitncnn_2
+Interp           Resize_108               1 1 390_splitncnn_2 409 0=1 1=1.000000e+00 2=1.000000e+00 3=40 4=40
+BinaryOp         Add_109                  2 1 387 409 410 0=0
+Convolution      Conv_110                 1 1 410 411 0=64 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=36864
+BatchNorm        BatchNormalization_111   1 1 411 412 0=64
+ReLU             Relu_112                 1 1 412 413
+Split            splitncnn_3              1 3 413 413_splitncnn_0 413_splitncnn_1 413_splitncnn_2
+Interp           Resize_131               1 1 413_splitncnn_2 432 0=1 1=1.000000e+00 2=1.000000e+00 3=80 4=80
+BinaryOp         Add_132                  2 1 384 432 433 0=0
+Convolution      Conv_133                 1 1 433 434 0=64 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=36864
+BatchNorm        BatchNormalization_134   1 1 434 435 0=64
+ReLU             Relu_135                 1 1 435 436
+Split            splitncnn_4              1 2 436 436_splitncnn_0 436_splitncnn_1
+Convolution      Conv_136                 1 1 436_splitncnn_1 437 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=18432
+BatchNorm        BatchNormalization_137   1 1 437 438 0=32
+Convolution      Conv_138                 1 1 436_splitncnn_0 439 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=9216
+BatchNorm        BatchNormalization_139   1 1 439 440 0=16
+ReLU             Relu_140                 1 1 440 441
+Split            splitncnn_5              1 2 441 441_splitncnn_0 441_splitncnn_1
+Convolution      Conv_141                 1 1 441_splitncnn_1 442 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_142   1 1 442 443 0=16
+Convolution      Conv_143                 1 1 441_splitncnn_0 444 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_144   1 1 444 445 0=16
+ReLU             Relu_145                 1 1 445 446
+Convolution      Conv_146                 1 1 446 447 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_147   1 1 447 448 0=16
+Concat           Concat_148               3 1 438 443 448 449 0=0
+ReLU             Relu_149                 1 1 449 450
+Split            splitncnn_6              1 3 450 450_splitncnn_0 450_splitncnn_1 450_splitncnn_2
+Convolution      Conv_150                 1 1 413_splitncnn_1 451 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=18432
+BatchNorm        BatchNormalization_151   1 1 451 452 0=32
+Convolution      Conv_152                 1 1 413_splitncnn_0 453 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=9216
+BatchNorm        BatchNormalization_153   1 1 453 454 0=16
+ReLU             Relu_154                 1 1 454 455
+Split            splitncnn_7              1 2 455 455_splitncnn_0 455_splitncnn_1
+Convolution      Conv_155                 1 1 455_splitncnn_1 456 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_156   1 1 456 457 0=16
+Convolution      Conv_157                 1 1 455_splitncnn_0 458 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_158   1 1 458 459 0=16
+ReLU             Relu_159                 1 1 459 460
+Convolution      Conv_160                 1 1 460 461 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_161   1 1 461 462 0=16
+Concat           Concat_162               3 1 452 457 462 463 0=0
+ReLU             Relu_163                 1 1 463 464
+Split            splitncnn_8              1 3 464 464_splitncnn_0 464_splitncnn_1 464_splitncnn_2
+Convolution      Conv_164                 1 1 390_splitncnn_1 465 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=18432
+BatchNorm        BatchNormalization_165   1 1 465 466 0=32
+Convolution      Conv_166                 1 1 390_splitncnn_0 467 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=9216
+BatchNorm        BatchNormalization_167   1 1 467 468 0=16
+ReLU             Relu_168                 1 1 468 469
+Split            splitncnn_9              1 2 469 469_splitncnn_0 469_splitncnn_1
+Convolution      Conv_169                 1 1 469_splitncnn_1 470 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_170   1 1 470 471 0=16
+Convolution      Conv_171                 1 1 469_splitncnn_0 472 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_172   1 1 472 473 0=16
+ReLU             Relu_173                 1 1 473 474
+Convolution      Conv_174                 1 1 474 475 0=16 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=0 6=2304
+BatchNorm        BatchNormalization_175   1 1 475 476 0=16
+Concat           Concat_176               3 1 466 471 476 477 0=0
+ReLU             Relu_177                 1 1 477 478
+Split            splitncnn_10             1 3 478 478_splitncnn_0 478_splitncnn_1 478_splitncnn_2
+Convolution      Conv_178                 1 1 450_splitncnn_2 479 0=8 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=512
+Permute          Transpose_179            1 1 479 480 0=3
+Reshape          Reshape_185              1 1 480 490 0=4 1=-1
+Convolution      Conv_186                 1 1 464_splitncnn_2 491 0=8 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=512
+Permute          Transpose_187            1 1 491 492 0=3
+Reshape          Reshape_193              1 1 492 502 0=4 1=-1
+Convolution      Conv_194                 1 1 478_splitncnn_2 503 0=8 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=512
+Permute          Transpose_195            1 1 503 504 0=3
+Reshape          Reshape_201              1 1 504 514 0=4 1=-1
+Concat           Concat_202               3 1 490 502 514 515 0=0
+Convolution      Conv_203                 1 1 450_splitncnn_1 516 0=4 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=256
+Permute          Transpose_204            1 1 516 517 0=3
+Reshape          Reshape_210              1 1 517 527 0=2 1=-1
+Convolution      Conv_211                 1 1 464_splitncnn_1 528 0=4 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=256
+Permute          Transpose_212            1 1 528 529 0=3
+Reshape          Reshape_218              1 1 529 539 0=2 1=-1
+Convolution      Conv_219                 1 1 478_splitncnn_1 540 0=4 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=256
+Permute          Transpose_220            1 1 540 541 0=3
+Reshape          Reshape_226              1 1 541 551 0=2 1=-1
+Concat           Concat_227               3 1 527 539 551 552 0=0
+Convolution      Conv_228                 1 1 450_splitncnn_0 553 0=20 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=1280
+Permute          Transpose_229            1 1 553 554 0=3
+Reshape          Reshape_235              1 1 554 564 0=10 1=-1
+Convolution      Conv_236                 1 1 464_splitncnn_0 565 0=20 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=1280
+Permute          Transpose_237            1 1 565 566 0=3
+Reshape          Reshape_243              1 1 566 576 0=10 1=-1
+Convolution      Conv_244                 1 1 478_splitncnn_0 577 0=20 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=1280
+Permute          Transpose_245            1 1 577 578 0=3
+Reshape          Reshape_251              1 1 578 588 0=10 1=-1
+Concat           Concat_252               3 1 564 576 588 589 0=0
+Softmax          Softmax_253              1 1 552 590 0=1 1=1
